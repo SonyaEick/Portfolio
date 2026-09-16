@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sonya Eick — Senior Platform Engineer. Infrastructure automation, internal tooling, and cloud-native API development." />
+  <title>Sonya Eick — Senior Platform Engineer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <button type="button" class="btn-icon" id="navToggle" aria-label="Open site menu" aria-expanded="false" aria-controls="siteNav">
+      <span class="hamburger" aria-hidden="true"></span>
+      Menu
+    </button>
+    <div class="page-controls">
+      <button type="button" class="btn-icon" id="themeBtn" aria-label="Toggle color theme">
+        <span aria-hidden="true">☀</span> Light
+      </button>
+      <button type="button" class="btn-icon" id="pdfBtn" aria-label="Save as PDF">
+        <span aria-hidden="true">⬇</span> Save PDF
+      </button>
+    </div>
+  </div>
+
+  <div class="nav-backdrop" id="navBackdrop" hidden></div>
+  <nav class="site-nav" id="siteNav" aria-label="Site" hidden>
+    <div class="site-nav-header">
+      <p class="site-nav-label">theartisonian.com</p>
+      <button type="button" class="drawer-close" id="navClose" aria-label="Close menu">×</button>
+    </div>
+    <ul class="site-nav-list">
+      <li><a href="/" class="site-nav-link is-current">Resume</a></li>
+      <li><a href="/newspaper/" class="site-nav-link">Newspaper</a></li>
+      <li><a href="https://oyster.theartisonian.com" class="site-nav-link">Oyster</a></li>
+      <li><a href="https://theartisonian.com/bookclub/" class="site-nav-link">Bookclub Eliminator</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <header class="profile">
+      <h1>Sonya Eick</h1>
+      <p class="title">Senior Platform Engineer | Backend &amp; DevOps Automation</p>
+      <p class="bio">
+        Senior Systems and Python Engineer specializing in infrastructure automation, internal tooling,
+        and cloud-native API development. Proven track record of reducing engineering overhead,
+        optimizing deployment workflows, and automating cloud security and observability pipelines.
+        Expert at bridging the gap between application code and cloud infrastructure.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:seick.atx@gmail.com">seick.atx@gmail.com</a>
+        <a href="tel:+18084859930">(808) 485-9930</a>
+        <a href="https://linkedin.com/in/sonya-eick" target="_blank" rel="noopener noreferrer">linkedin.com/in/sonya-eick</a>
+        <a href="https://github.com/SonyaEick" target="_blank" rel="noopener noreferrer">github.com/SonyaEick</a>
+        <span class="contact-static">Austin, TX</span>
+      </div>
+    </header>
+
+    <div class="layout">
+      <div class="col-main">
+        <section aria-labelledby="experience-heading">
+          <h2 id="experience-heading" class="section-title">Work Experience</h2>
+
+          <article class="item">
+            <div class="item-header">
+              <h3 class="role-title">
+                Senior Software Engineer
+                <span class="company">— GM Motorsports</span>
+              </h3>
+              <p class="meta">Distributed Systems &amp; Telemetry · Austin, TX · 01/2026 – 5/2026</p>
+            </div>
+            <ul class="details">
+              <li>Contributed to race telemetry and strategy tooling supporting live Motorsports operations in event-driven environments.</li>
+              <li>Redesigned a Redis locking strategy from a single global lock to granular race- and vehicle-level locks, reducing contention while preserving backward-compatible legacy behavior during rollout.</li>
+              <li>Restructured PostgreSQL schemas for race strategy workflows, consolidating redundant tables and improving query efficiency.</li>
+              <li>Added ingestion-boundary validation to keep malformed telemetry out of downstream strategy systems.</li>
+              <li>Improved test coverage on critical strategy paths and documented testing priorities for onboarding and maintainability.</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="item-header">
+              <h3 class="role-title">
+                Software Engineer III
+                <span class="company">— JPMorgan Chase &amp; Co.</span>
+              </h3>
+              <p class="meta">Infrastructure &amp; Automation · Plano, TX · 01/2022 – 04/2025</p>
+            </div>
+            <ul class="details">
+              <li>Built CLI tools for Terraform module version updates and one-command Docker build/deploy to AWS dev environments; the deploy tool was handed off with documentation and gained widespread internal adoption.</li>
+              <li>Developed a firewall management UI from scratch (Python, React, Material UI) to make rule configuration clearer and faster.</li>
+              <li>Automated EKS log-group allowlist management with EventBridge-triggered Lambda updating SSM, keeping CloudWatch observability routing current.</li>
+              <li>Delivered a sentiment-analysis POC for customer error reports and employee blogs; demoed to senior leadership.</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="item-header">
+              <h3 class="role-title">
+                API / Network Developer II &amp; III
+                <span class="company">— Charter / Spectrum Enterprise</span>
+              </h3>
+              <p class="meta">Integrations &amp; Microservices · Austin, TX · 09/2019 – 01/2022</p>
+            </div>
+            <ul class="details">
+              <li>Built and maintained four core microservices for order processing from Salesforce through configuration, provisioning, and orchestration to customer devices.</li>
+              <li>Optimized provisioning workflows, reducing order processing from hours to minutes.</li>
+              <li>Implemented Jenkins CI/CD to replace manual overnight deployments and established PyTest-based automated testing.</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="item-header">
+              <h3 class="role-title">
+                Python Developer
+                <span class="company">— Command Alkon / Ruckit LLC</span>
+              </h3>
+              <p class="meta">Data Modeling &amp; Core Backend · Austin, TX · 01/2018 – 09/2021</p>
+            </div>
+            <ul class="details">
+              <li>Built an OCR-based ticketing system (Google OCR) to automate paper ticket processing for logistics data.</li>
+              <li>Designed a modular rerouting mechanism that generated new driver jobs from OCR data, reducing dispatcher overhead across Jobs, Companies, Drivers, and Trucks.</li>
+              <li>Shipped an internal chat system for job owners, dispatchers, and drivers that was adopted organization-wide; automated company-specific invoice numbering.</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="item-header">
+              <h3 class="role-title">
+                Full-Stack Developer
+                <span class="company">— Andrew Harper LLC</span>
+              </h3>
+              <p class="meta">Product Tooling · Austin, TX · 10/2015 – 03/2017</p>
+            </div>
+            <ul class="details">
+              <li>Built a subscription management dashboard for onboarding and existing customer subscriptions.</li>
+              <li>Implemented a geographical hotel tree with rich filtering for luxury travel planning worldwide.</li>
+              <li>Created an address-correction script that reduced shipping errors, refunds, and reprint costs.</li>
+            </ul>
+          </article>
+        </section>
+      </div>
+
+      <aside class="col-side">
+        <section aria-labelledby="skills-heading">
+          <h2 id="skills-heading" class="section-title">Technical Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <div class="category-label">Languages</div>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Java</span>
+                <span class="tag">Kotlin</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Bash</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <div class="category-label">Backend</div>
+              <div class="tags">
+                <span class="tag">FastAPI</span>
+                <span class="tag">Django</span>
+                <span class="tag">Flask</span>
+                <span class="tag">Spring Boot</span>
+                <span class="tag">REST</span>
+                <span class="tag">Microservices</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <div class="category-label">Frontend</div>
+              <div class="tags">
+                <span class="tag">React</span>
+                <span class="tag">Material UI</span>
+                <span class="tag">HTML/CSS</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <div class="category-label">Cloud &amp; Infra</div>
+              <div class="tags">
+                <span class="tag">AWS</span>
+                <span class="tag">Terraform</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Kubernetes</span>
+                <span class="tag">EKS</span>
+                <span class="tag">Jenkins</span>
+                <span class="tag">CI/CD</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <div class="category-label">Data</div>
+              <div class="tags">
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Redis</span>
+                <span class="tag">Kafka</span>
+                <span class="tag">SQS/SNS</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <div class="category-label">Quality</div>
+              <div class="tags">
+                <span class="tag">Pytest</span>
+                <span class="tag">Integration tests</span>
+                <span class="tag">Observability</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section aria-labelledby="work-projects-heading">
+          <h2 id="work-projects-heading" class="section-title">Selected Work</h2>
+          <div class="projects-grid projects-grid--side">
+            <button type="button" class="project-card" data-project="redis-locks">
+              <span class="project-title">Redis Lock Redesign</span>
+              <span class="project-desc">Granular race- and vehicle-level locks for live Motorsports telemetry.</span>
+              <span class="tags">
+                <span class="tag">Redis</span>
+                <span class="tag">Distributed systems</span>
+              </span>
+            </button>
+            <button type="button" class="project-card" data-project="infra-clis">
+              <span class="project-title">Infra Automation CLIs</span>
+              <span class="project-desc">Terraform currency and one-command AWS dev deploys engineers actually adopted.</span>
+              <span class="tags">
+                <span class="tag">CLI</span>
+                <span class="tag">AWS</span>
+                <span class="tag">Terraform</span>
+              </span>
+            </button>
+            <button type="button" class="project-card" data-project="order-pipeline">
+              <span class="project-title">Order Microservices</span>
+              <span class="project-desc">Salesforce-to-device provisioning cut from hours to minutes.</span>
+              <span class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Microservices</span>
+              </span>
+            </button>
+            <button type="button" class="project-card" data-project="ocr-routing">
+              <span class="project-title">OCR &amp; Dynamic Routing</span>
+              <span class="project-desc">Paper tickets to automatic driver job assignment for logistics.</span>
+              <span class="tags">
+                <span class="tag">OCR</span>
+                <span class="tag">Python</span>
+              </span>
+            </button>
+          </div>
+        </section>
+
+        <section aria-labelledby="personal-projects-heading">
+          <h2 id="personal-projects-heading" class="section-title">Personal Projects</h2>
+          <div class="projects-grid projects-grid--side">
+            <button type="button" class="project-card" data-project="eliminator">
+              <span class="project-title">Bookclub Eliminator</span>
+              <span class="project-desc">Real-time book elimination game with WebSocket broadcasts.</span>
+              <span class="tags">
+                <span class="tag">FastAPI</span>
+                <span class="tag">React</span>
+              </span>
+            </button>
+            <button type="button" class="project-card" data-project="newspaper">
+              <span class="project-title">Newspaper</span>
+              <span class="project-desc">A shared paper for news-style updates from friends—or anyone who has a story to tell.</span>
+              <span class="tags">
+                <span class="tag">React</span>
+                <span class="tag">Community</span>
+              </span>
+            </button>
+            <button type="button" class="project-card" data-project="oyster">
+              <span class="project-title">Oyster</span>
+              <span class="project-desc">Your personal memory bank for places you’ve been—and why you love them.</span>
+              <span class="tags">
+                <span class="tag">Django</span>
+                <span class="tag">Places</span>
+              </span>
+            </button>
+          </div>
+        </section>
+
+        <section aria-labelledby="education-heading">
+          <h2 id="education-heading" class="section-title">Education</h2>
+          <ul class="simple-list">
+            <li><strong>Oxford Artificial Intelligence Programme</strong> · 04/2025</li>
+            <li><strong>Stanford Machine Learning Specialization</strong> · 04/2025</li>
+            <li><strong>Austin Community College</strong> — Software Engineering · 2017–2018</li>
+            <li><strong>Hackbright Academy</strong> — Python Programming · 2012–2013</li>
+            <li><strong>Northern Michigan University</strong> — Architecture / Psychology minor · 2007–2009</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="certs-heading">
+          <h2 id="certs-heading" class="section-title">Certifications</h2>
+          <ul class="simple-list">
+            <li><strong>AWS Certified Cloud Practitioner</strong> · Nov 2023 – Nov 2026</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="accomplishments-heading">
+          <h2 id="accomplishments-heading" class="section-title">Other</h2>
+          <ul class="simple-list">
+            <li>2nd Place — Health 2.0 Hackathon (San Francisco)</li>
+            <li>3rd Place — Alameda County acApps Hackathon</li>
+            <li>Mentioned in SFGate and Udemy on Silicon Valley web development</li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      <p>© <span id="year"></span> Sonya Eick · theartisonian.com</p>
+    </footer>
+  </main>
+
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+  <aside
+    class="drawer"
+    id="projectDrawer"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="drawerTitle"
+    hidden
+  >
+    <div class="drawer-header">
+      <h2 id="drawerTitle"></h2>
+      <button type="button" class="drawer-close" id="drawerClose" aria-label="Close panel">×</button>
+    </div>
+    <div class="drawer-tags" id="drawerTags"></div>
+    <div class="drawer-body" id="drawerBody"></div>
+  </aside>
+
+  <script src="js/projects.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
